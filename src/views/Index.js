@@ -11,6 +11,7 @@ import Footer from "components/Footers/Footer.js";
 
 // sections for this page
 import Images from "./index-sections/Images.js";
+import FoodImages from "./index-sections/FoodImages"
 import Menu from "./index-sections/Menu"
 import Address from "./index-sections/Address"
 
@@ -32,7 +33,7 @@ function Index() {
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
-          <Images />
+          <FoodImages />
           <Menu />
           <Address />
         </div>

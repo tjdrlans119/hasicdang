@@ -31,7 +31,7 @@ function IndexHeader() {
           style={{
             // backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
             // backgroundImage: "url(" + require("assets/img/하식당.jpeg") + ")"
-            backgroundColor: "black"
+            backgroundColor: "#363533"
           }}
           ref={pageHeader}
         ></div>
@@ -42,20 +42,23 @@ function IndexHeader() {
               className="hasicdang-logo"
               // src={require("assets/img/now-logo.png")}
               src={require("assets/img/하식당.jpeg")}
+              width={"70%"}
             ></img>
-            {/* <h1 className="h1-seo">하식당</h1> */}
-            {/* <h3>밥집과 술집 사이</h3> */}
+            {/* <h1 className="h1-seo"></h1> */}
+            <h3 className="h3-seo">하사장의 요리연구소</h3>
           </div>
-          <h6 className="category category-absolute">
-            Address{" "}
-            <a href="http://kko.to/mMQP5Zk0H" target="_blank">
-              1호점
+          <div>
+            <h6 className="category category-absolute">
+              Address{" "}
+              <a href="http://kko.to/mMQP5Zk0H" target="_blank">
+                1호점
             </a>
             .{" "}
-            <a href="http://kko.to/mMQP5Zk0H" target="_blank">
-              2호점
+              <a href="http://kko.to/mMQP5Zk0H" target="_blank">
+                2호점
             </a>
-          </h6>
+            </h6>
+          </div>
         </Container>
       </div>
     </>
