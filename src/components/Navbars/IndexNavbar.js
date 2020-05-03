@@ -171,15 +171,15 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.instagram.com/ha_taemoo/"
+                  href="http://pf.kakao.com/_xmYRtT/chat"
                   target="_blank"
-                  id="instagram-tooltip"
+                  id="kakao-tooltip"
                 >
                   <i className="fab">kakao</i>
-                  <p className="d-lg-none d-xl-none">kakao</p>
+                  <p className="d-lg-none d-xl-none"></p>
                 </NavLink>
-                <UncontrolledTooltip target="#instagram-tooltip">
-                  Follow us on Instagram
+                <UncontrolledTooltip target="#kakao-tooltip">
+                  Start Chat us on Kakao
                 </UncontrolledTooltip>
               </NavItem>
             </Nav>
