@@ -55,7 +55,7 @@ function Address() {
               </Button>
             </Col>
             <Col lg="6" md="12">
-              {/* <h2 className="title">찾아오시는길</h2> */}
+              <h2 className="title"> </h2>
               <h5 className="description">
                 범계 2호점
               </h5>

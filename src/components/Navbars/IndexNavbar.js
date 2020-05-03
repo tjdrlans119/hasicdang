@@ -16,22 +16,27 @@ import {
   Container,
   UncontrolledTooltip
 } from "reactstrap";
+import { decodedTextSpanIntersectsWith } from "typescript";
 
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [navbarTextVisible, setNavbarTextVisible] = React.useState(false);
+
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > 399 ||
         document.body.scrollTop > 399
       ) {
-        setNavbarColor("");
+        setNavbarColor("bg-primary");
+        setNavbarTextVisible(true)
       } else if (
         document.documentElement.scrollTop < 400 ||
         document.body.scrollTop < 400
       ) {
         setNavbarColor("navbar-transparent");
+        setNavbarTextVisible(false)
       }
     };
     window.addEventListener("scroll", updateNavbarColor);
@@ -50,15 +55,14 @@ function IndexNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
+      <Navbar className={"fixed-top " + navbarColor} expand="xl" >
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
-              target="_blank"
+              href="/"
               id="navbar-brand"
             >
-              하식당
+              {navbarTextVisible ? <b>하식당</b> : ''}
             </NavbarBrand>
             <UncontrolledTooltip target="#navbar-brand">
               밥집과 술집 사이
@@ -91,6 +95,8 @@ function IndexNavbar() {
                     document
                       .getElementById("menu-section")
                       .scrollIntoView();
+                    document.documentElement.classList.toggle("nav-open");
+                    setCollapseOpen(!collapseOpen);
                   }}
                 >
                   <i className="now-ui-icons education_paper"></i>
@@ -105,10 +111,11 @@ function IndexNavbar() {
                     document
                       .getElementById("address-section")
                       .scrollIntoView();
+                    document.documentElement.classList.toggle("nav-open");
+                    setCollapseOpen(!collapseOpen);
                   }}
                 >
                   <i className="now-ui-icons location_pin"></i>
-
                   <p>찾아오시는길</p>
                 </NavLink>
               </NavItem>
@@ -118,22 +125,21 @@ function IndexNavbar() {
                   color="default"
                   href="#pablo"
                   nav
-                  onClick={e => e.preventDefault()}
+                  onClick={e => {
+                    e.preventDefault()
+                  }}
                 >
                   <i className="now-ui-icons design_app mr-1"></i>
-                  <p>Components</p>
+                  <p>소개</p>
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem to="/index" tag={Link}>
+                  <DropdownItem to="/info" tag={Link}>
                     <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
-                    All components
+                    하식당
                   </DropdownItem>
-                  <DropdownItem
-                    href="https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-index-navbar"
-                    target="_blank"
-                  >
-                    <i className="now-ui-icons design_bullet-list-67 mr-1"></i>
-                    Documentation
+                  <DropdownItem to="/info" tag={Link}>
+                    <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
+                    하사장
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -152,7 +158,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                  href="https://www.instagram.com/ha_taemoo/"
                   target="_blank"
                   id="instagram-tooltip"
                 >
@@ -161,6 +167,19 @@ function IndexNavbar() {
                 </NavLink>
                 <UncontrolledTooltip target="#instagram-tooltip">
                   Follow us on Instagram
+                </UncontrolledTooltip>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  href="http://pf.kakao.com/_xmYRtT/chat"
+                  target="_blank"
+                  id="kakao-tooltip"
+                >
+                  <i className="fab">kakao</i>
+                  <p className="d-lg-none d-xl-none"></p>
+                </NavLink>
+                <UncontrolledTooltip target="#kakao-tooltip">
+                  Start Chat us on Kakao
                 </UncontrolledTooltip>
               </NavItem>
             </Nav>
