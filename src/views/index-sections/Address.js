@@ -1,8 +1,15 @@
 import React from "react";
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
-
+import MapContent from "../index-sections/MapContent"
 // core components
+
+// const Style = {
+//   map:{
+//     width:"100%",
+//     height:"500px"
+//   }
+// }
 
 function Address() {
   return (
@@ -19,6 +26,14 @@ function Address() {
               <h5 className="description">
                 안양 1호점
               </h5>
+              <div>
+               <MapContent  
+               testProps={3333}
+               mapTarget={"first"}
+              //  lat={37.400046}
+              //  lng={126.923564}
+               />
+              </div>
               <Button
                 className="btn-round mr-1"
                 color="info"
@@ -44,6 +59,14 @@ function Address() {
               <h5 className="description">
                 범계 2호점
               </h5>
+              <div>
+               <MapContent 
+               testProps={123}
+               mapTarget={"second"}
+              //  lat={37.389888}
+              //  lng={126.950616  }
+               />
+              </div>
               <Button
                 className="btn-round mr-1"
                 color="info"
