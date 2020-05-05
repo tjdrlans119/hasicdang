@@ -55,13 +55,9 @@ function Menu() {
   };
   return (
     <>
-      <div
-        className="section section-menu"
-        data-background-color="white"
-        id="menu-section"
-      >
+      <div className="section section-menu" data-background-color="white">
         <Container>
-          <div className="title">
+          <div className="title" id="menu-section">
             <h4>메뉴</h4>
           </div>
           <Row className="justify-content-center">
