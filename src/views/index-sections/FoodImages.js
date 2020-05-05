@@ -12,43 +12,29 @@ import {
 const items = [
   {
     src: require("assets/img/food/1.jpeg"),
-    altText: "이거이름뭐더라",
-    caption: "이거이름뭐더라"
+    // altText: "이거이름뭐더라",
+    // caption: "이거이름뭐더라"
   },
   {
     src: require("assets/img/food/2.jpeg"),
-    altText: "이거이름뭐더라",
-    caption: "이거이름뭐더라"
   },
   {
     src: require("assets/img/food/3.jpeg"),
-    altText: "이거이름뭐더라",
-    caption: "이거이름뭐더라"
   },
   {
     src: require("assets/img/food/4.jpeg"),
-    altText: "이거이름뭐더라",
-    caption: "이거이름뭐더라"
   },
   {
     src: require("assets/img/food/5.jpeg"),
-    altText: "이거이름뭐더라",
-    caption: "이거이름뭐더라"
   },
   {
     src: require("assets/img/food/6.jpeg"),
-    altText: "이거이름뭐더라",
-    caption: "이거이름뭐더라"
   },
   {
     src: require("assets/img/food/7.jpeg"),
-    altText: "이거이름뭐더라",
-    caption: "이거이름뭐더라"
   },
   {
     src: require("assets/img/food/8.jpeg"),
-    altText: "이거이름뭐더라",
-    caption: "이거이름뭐더라"
   },
 ];
 
@@ -78,13 +64,13 @@ function FoodImages() {
   };
   return (
     <>
-      <div className="section" id="carousel">
+      <div className="section" id="foodImages">
         <Container>
           <div className="title">
-            <h4>Carousel</h4>
+            <h4>하식당<sup style={{ color: 'red', fontSize: "13px" }}>Best</sup></h4>
           </div>
           <Row className="justify-content-center">
-            <Col lg="8" md="12">
+            <Col lg="12" md="18">
               <Carousel
                 activeIndex={activeIndex}
                 next={next}

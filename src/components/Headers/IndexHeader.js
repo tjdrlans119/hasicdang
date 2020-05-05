@@ -1,10 +1,8 @@
-/*eslint-disable*/
 import React from "react";
 
 // reactstrap components
 import { Container } from "reactstrap";
 // core components
-
 function IndexHeader() {
   let pageHeader = React.createRef();
 
@@ -24,15 +22,10 @@ function IndexHeader() {
 
   return (
     <>
-      {/* <div className="page-header clear-filter" filter-color="blue"> */}
       <div className="page-header clear-filter" filter-color="black">
         <div
           className="page-header-image"
-          style={{
-            // backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
-            // backgroundImage: "url(" + require("assets/img/하식당.jpeg") + ")"
-            backgroundColor: "#363533"
-          }}
+          style={{ backgroundColor: "#363533" }}
           ref={pageHeader}
         ></div>
         <Container>
@@ -40,22 +33,21 @@ function IndexHeader() {
             <img
               alt="JMT.하식당"
               className="hasicdang-logo"
-              // src={require("assets/img/now-logo.png")}
               src={require("assets/img/하식당.jpeg")}
               width={"70%"}
             ></img>
-            {/* <h1 className="h1-seo"></h1> */}
+            {/* <h1 className="h1-seo">ㅇㅇㅇ</h1> */}
             <h3 className="h3-seo">하사장의 요리연구소</h3>
           </div>
           <div>
             <h6 className="category category-absolute">
               Address{" "}
               <a href="http://kko.to/mMQP5Zk0H" target="_blank">
-                1호점
+                안양점
             </a>
             .{" "}
-              <a href="http://kko.to/mMQP5Zk0H" target="_blank">
-                2호점
+              <a href="http://kko.to/4pNn5vC0p" target="_blank">
+                범계점
             </a>
             </h6>
           </div>
