@@ -6,7 +6,7 @@ import MapContent from "../index-sections/MapContent"
 
 // const Style = {
 //   map:{
-//     width:"100%",
+//     width:"%",
 //     height:"500px"
 //   }
 // }
@@ -18,26 +18,26 @@ function Address() {
         className="section section-address"
         data-background-color="black"
         id="address-section"
+        style={{margin:'0 auto',  textAlign:'center'}}
       >
         <Container>
+          <h2 className="title">찾아오시는길</h2>
           <Row>
-            <Col lg="6" md="12">
-              <h2 className="title">찾아오시는길</h2>
+            <Col lg="3" md="12">
               <h5 className="description">
                 안양 1호점
               </h5>
               <div>
-               <MapContent  
-               testProps={3333}
+               <MapContent
                mapTarget={"first"}
-              //  lat={37.400046}
-              //  lng={126.923564}
                />
               </div>
+              </Col>
+              <Col>
               <Button
                 className="btn-round mr-1"
                 color="info"
-                href="/nucleo-icons"
+                href="https://map.kakao.com/link/to/하식당,37.400046,126.923564"
                 size="sm"
                 target="_blank"
               >
@@ -46,16 +46,14 @@ function Address() {
               <Button
                 className="btn-round"
                 color="info"
-                href="https://nucleoapp.com/?ref=1712"
+                href="tel:01031577003"
                 outline
                 size="sm"
-                target="_blank"
-              >
+              > 
                 연락하기
               </Button>
             </Col>
             <Col lg="6" md="12">
-              <h2 className="title"> </h2>
               <h5 className="description">
                 범계 2호점
               </h5>
@@ -70,7 +68,7 @@ function Address() {
               <Button
                 className="btn-round mr-1"
                 color="info"
-                href="/nucleo-icons"
+                href="https://map.kakao.com/link/to/하식당,37.389888,126.950616"
                 size="sm"
                 target="_blank"
               >
@@ -79,10 +77,9 @@ function Address() {
               <Button
                 className="btn-round"
                 color="info"
-                href="https://nucleoapp.com/?ref=1712"
+                href="tel:01031577003"
                 outline
                 size="sm"
-                target="_blank"
               >
                 연락하기
               </Button>
